@@ -1,0 +1,75 @@
+/**
+ * Copyright (c) 2018 AppDynamics LLC and its affiliates
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import java.text.SimpleDateFormat
+
+apply plugin: 'java-library-distribution'
+
+group 'com.appdynamics.iot'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+distributions {
+    main {
+        baseName = "appd-iot-sdk"
+    }
+}
+
+jar {
+    baseName = "appd-iot-sdk"
+}
+
+dependencies {
+    compile 'com.google.guava:guava:18.0'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.0'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.6.0'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'org.easymock', name: 'easymock', version: '3.1'
+    testCompile group: 'uk.org.lidalia', name: 'slf4j-test', version: '1.2.0'
+}
+def simpleDateFormat = new SimpleDateFormat("yyyy")
+def currentYear = simpleDateFormat.format(new Date())
+
+task generateJavadocs(overwrite: true, type: Javadoc) {
+    group = 'Documentation'
+    description = 'Generates Javadocs for IoT SDK.'
+    title = 'AppDynamics SDK for Connected Devices'
+    options.footer "Copyright $currentYear AppDynamics Inc. All rights reserved."
+    source = sourceSets.main.allJava
+    def publicDocs = [
+            'Instrumentation',
+            'AgentConfiguration',
+            'VersionInfo',
+            'CollectorChannel',
+            'CollectorChannelFactory',
+            'HttpRequestTracker',
+            'CustomEvent',
+            'ErrorEvent',
+            'NetworkRequestEvent',
+            'Event',
+            'DeviceInfo'
+    ]
+    include publicDocs.collect { clazz -> "**/${clazz}.java" }
+    setClasspath(files("./src/main/java", project.configurations.compile))
+}
+
+task generateZippedJavadocs(type: Zip) {
+    dependsOn 'generateJavadocs'
+    from project.properties['docsDir']
+    include '**/*'
+    archiveName 'appd-iot-javadoc.zip'
+}
