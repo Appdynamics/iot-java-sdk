@@ -29,14 +29,14 @@ This repository contains AppDynamics IoT Java SDK that can be used in embedded a
 
 Best place to understand the usage of SDK is to run the sample application.
 
-* Clone or download the repo: https://github.com/Appdynamics/iot-java-sdk.git in `<MY_SOURCE_FOLDER>`
+* Clone or download the repo `https://github.com/Appdynamics/iot-java-sdk.git` in `<MY_SOURCE_FOLDER>`
  
 * Get [EUM App Key and Collector URL](https://docs.appdynamics.com/display/latest/Set+Up+and+Access+IoT+Monitoring#SetUpandAccessIoTMonitoring-iot-app-key)
 
-* Add these to your sample app by editing.
-`<MY_SOURCE_FOLDER>/iot-java-sdk/sample-apps/src/main/java/com/appdynamics/iotapps/MyIoTSampleApp.java`
-`public static final String APP_KEY = "<YOUR-APP-KEY>";`
-`public static final String COLLECTOR_URL = "<YOUR-COLLECTOR-URL>";`
+* Add these to your sample app by editing.  
+`<MY_SOURCE_FOLDER>/iot-java-sdk/sample-apps/src/main/java/com/appdynamics/iotapps/MyIoTSampleApp.java`  
+`public static final String APP_KEY = "<YOUR-APP-KEY>";`   
+`public static final String COLLECTOR_URL = "<YOUR-COLLECTOR-URL>";`  
 
 * Build the SDK by running the following commands.
 `cd <MY_SOURCE_FOLDER>/iot-java-sdk `
@@ -50,9 +50,9 @@ Best place to understand the usage of SDK is to run the sample application.
 
 * Un-tar and run the application.
 
-	`cd <MY_DEPLOY_FOLDER> ` 
-	`tar xvf appd-iot-sample-app.tar`
-	`./appd-iot-sample-app/bin/sample-apps`
+	`cd <MY_DEPLOY_FOLDER> `  
+	`tar xvf appd-iot-sample-app.tar`  
+	`./appd-iot-sample-app/bin/sample-apps`  
 
 * Confirm [IoT Data](https://docs.appdynamics.com/display/latest/Confirm+the+IoT+Application+Reported+Data+to+the+Controller) is
 reported to Collector.
@@ -73,7 +73,7 @@ The released version of the SDK can be downloaded from [here]( <TODO HERE>)
 * Clone or download the repo: https://github.com/Appdynamics/iot-java-sdk.git in `<MY_SOURCE_FOLDER>`
 * Make any modifications, if desired
 * Run the following command from the terminal
-`cd <MY_SOURCE_FOLDER>/iot-java-sdk `
+`cd <MY_SOURCE_FOLDER>/iot-java-sdk `  
 `./gradlew -p sdk/ clean assemble test generateZippedJavadocs `
  
 ## Documentation
