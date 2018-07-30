@@ -28,7 +28,7 @@ This repository contains AppDynamics IoT Java SDK that can be used in embedded a
 
 Best place to understand the usage of SDK is to run the sample application.
 
-* Clone or download the repo `https://github.com/Appdynamics/iot-java-sdk.git` in `<MY_SOURCE_FOLDER>`
+* Clone or download the repo https://github.com/Appdynamics/iot-java-sdk.git in `<MY_SOURCE_FOLDER>`
  
 * Get [EUM App Key and Collector URL](https://docs.appdynamics.com/display/latest/Set+Up+and+Access+IoT+Monitoring#SetUpandAccessIoTMonitoring-iot-app-key)
 
