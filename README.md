@@ -45,7 +45,7 @@ Best place to understand the usage of SDK is to run the sample application.
 * Create a new folder from where to run the deployed code
 `mkdir <MY_DEPLOY_FOLDER>`
 
-* Copy the distribution tar file which includes the appdynamics iot java sdk to this deployment code.
+* Copy the distribution tar file which includes the appdynamics iot java sdk to this deployment folder.  
 `cp ./sample-apps/build/distributions/appd-iot-sample-app.tar <MY_DEPLOY_FOLDER>`
 
 * Un-tar and run the application.
