@@ -5,7 +5,7 @@ Appdynamics IoT Java SDK to monitor performance of embedded applications on conn
 ## Table of contents
 
 - [Overview](#overview)
-- [What's included](#what's-included)
+- [What's included](#what-is-included)
 - [Getting Started](#getting-started)
 - [Download the released jar](#download-the-released-jar)
 - [Building the SDK](#building-the-sdk)
@@ -18,7 +18,7 @@ Appdynamics IoT Java SDK to monitor performance of embedded applications on conn
 This repository contains AppDynamics IoT Java SDK that can be used in embedded applications to monitor network perfomance, errors and business metrics.
 
 
-## What's included
+## What is included
 
 * `sdk` - The Appdynamics Java SDK for IoT 
 * `sample-apps` - A Sample Application showing how to use the SDK
@@ -38,17 +38,17 @@ Best place to understand the usage of SDK is to run the sample application.
 `public static final String APP_KEY = "<YOUR-APP-KEY>";`   
 `public static final String COLLECTOR_URL = "<YOUR-COLLECTOR-URL>";`  
 
-* Build the SDK by running the following commands.
-`cd <MY_SOURCE_FOLDER>/iot-java-sdk `
-`./gradlew -p sample-apps clean distTar`
+* Build the sample-app by running the following commands.  
+`cd <MY_SOURCE_FOLDER>/iot-java-sdk `  
+`./gradlew -p sample-apps clean distTar` 
 
-* Create a new folder from where to run the deployed code
+* Create a new folder from where to run the deployed code.  
 `mkdir <MY_DEPLOY_FOLDER>`
 
-* Copy the distribution tar file which includes the appdynamics iot java sdk to this deployment folder.  
+* Copy the distribution tar file which includes the appdynamics iot java sdk to this deployment folder.    
 `cp ./sample-apps/build/distributions/appd-iot-sample-app.tar <MY_DEPLOY_FOLDER>`
 
-* Un-tar and run the application.
+* Un-tar and run the application.  
 
 	`cd <MY_DEPLOY_FOLDER> `  
 	`tar xvf appd-iot-sample-app.tar`  
@@ -58,13 +58,12 @@ Best place to understand the usage of SDK is to run the sample application.
 reported to Collector.
 
 ## Download the released jar 
-Setup](https://help.github.com/articles/creating-releases/)
-The released version of the SDK can be downloaded from [here]( <TODO HERE>)
+The released version of the SDK can be downloaded from [here](https://github.com/Appdynamics/iot-java-sdk/releases)
 
 ## Building the SDK
 * Clone or download the repo: https://github.com/Appdynamics/iot-java-sdk.git in `<MY_SOURCE_FOLDER>`
-* Make any modifications, if desired
-* Run the following command from the terminal
+* Make any modifications to the sdk, if desired
+* Run the following command from the terminal  
 `cd <MY_SOURCE_FOLDER>/iot-java-sdk `
 `./gradlew -p sdk/ clean assemble test `
 
