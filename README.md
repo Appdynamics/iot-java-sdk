@@ -5,14 +5,14 @@ Appdynamics IoT Java SDK to monitor performance of embedded applications on conn
 ## Table of contents
 
 - [Overview](#overview)
-- [What's included](#what-is-included)
+- [What is included](#what-is-included)
 - [Getting Started](#getting-started)
 - [Download the released jar](#download-the-released-jar)
 - [Building the SDK](#building-the-sdk)
 - [Building the Javadocs](#building-the-javadocs)
 - [Documentation](#documentation)
 - [Versioning](#versioning)
-- [Copyright and license](#copyright-and-license)
+- [Copyright and License](#copyright-and-license)
 
 ## Overview
 This repository contains AppDynamics IoT Java SDK that can be used in embedded applications to monitor network perfomance, errors and business metrics.
