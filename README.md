@@ -1,5 +1,4 @@
-# iot-java-sdk
-Appdynamics IoT Java SDK to monitor performance of embedded applications on connected devices
+
 # AppDynamics IoT Java SDK
 
 ## Table of contents
@@ -33,19 +32,19 @@ Best place to understand the usage of SDK is to run the sample application.
  
 * Get [EUM App Key and Collector URL](https://docs.appdynamics.com/display/latest/Set+Up+and+Access+IoT+Monitoring#SetUpandAccessIoTMonitoring-iot-app-key)
 
-* Add these to your sample app by editing.  
+* Add your EUM app key and Collector URL to your sample app by editing:
 `<MY_SOURCE_FOLDER>/iot-java-sdk/sample-apps/src/main/java/com/appdynamics/iotapps/MyIoTSampleApp.java`  
 `public static final String APP_KEY = "<YOUR-APP-KEY>";`   
 `public static final String COLLECTOR_URL = "<YOUR-COLLECTOR-URL>";`  
 
-* Build the sample-app by running the following commands.  
+* Build the sample-app by running the following commands. (It also builds the SDK) 
 `cd <MY_SOURCE_FOLDER>/iot-java-sdk `  
 `./gradlew -p sample-apps clean distTar` 
 
 * Create a new folder from where to run the deployed code.  
 `mkdir <MY_DEPLOY_FOLDER>`
 
-* Copy the distribution tar file which includes the appdynamics iot java sdk to this deployment folder.    
+* Copy the distribution tar file which includes the Sample App and the AppDynamics IoT Java SDK to this deployment folder.    
 `cp ./sample-apps/build/distributions/appd-iot-sample-app.tar <MY_DEPLOY_FOLDER>`
 
 * Un-tar and run the application.  
