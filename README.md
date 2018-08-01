@@ -94,7 +94,7 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
 ## Documentation
 
 * [Javadoc](https://appdynamics.github.io/iot-java-sdk/) 
-* [REST API docs](https://docs.appdynamics.com/javadocs/iot-rest-api/4.4/latest/) - provides the payload structure sent to the Appdynamics EUM Collector.
+* [REST API docs](https://docs.appdynamics.com/javadocs/iot-rest-api/4.5/latest/) - provides the payload structure sent to the Appdynamics EUM Collector.
 * [User Documents](https://docs.appdynamics.com/display/latest/IoT+Monitoring) - provides an overview about the IoT monitoring capabilities.
 * Support for other languages:
     * [C++ SDK and Sample App](https://github.com/Appdynamics/iot-cpp-sdk)
