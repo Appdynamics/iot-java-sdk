@@ -32,6 +32,7 @@ The best way to understand how to use the SDK is to run the sample application.
 1. Clone or download the repo https://github.com/Appdynamics/iot-java-sdk.git in `<MY_SOURCE_FOLDER>`.
  
 1. Get an [EUM App Key and a Collector URL](https://docs.appdynamics.com/display/latest/Set+Up+and+Access+IoT+Monitoring#SetUpandAccessIoTMonitoring-iot-app-key).
+Note: If you do not have an AppDynamics account, you can sign up for one [here.](https://portal.appdynamics.com/account/)
 
 1. Add your EUM app key and Collector URL to your sample app by making the following edits to 
 `<MY_SOURCE_FOLDER>/iot-java-sdk/sample-apps/src/main/java/com/appdynamics/iotapps/MyIoTSampleApp.java`: 
