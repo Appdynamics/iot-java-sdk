@@ -30,6 +30,9 @@ public class MyIoTSampleApp {
     public static final String APP_KEY = "<YOUR-APP-KEY>";
     public static final String COLLECTOR_URL = "<YOUR-COLLECTOR-URL>";
 
+    //Simulates a long running application
+    private static final int LOOP_COUNT = 1;
+
     static final Logger LOGGER = LoggerFactory.getLogger(MyIoTSampleApp.class);
     private static MyAppKeyStateChangeListener listener = new MyAppKeyStateChangeListener() {};
 
@@ -37,9 +40,9 @@ public class MyIoTSampleApp {
         LOGGER.info("Initializing AppDynamics Instrumentation");
         initInstrumentation();
 
-        //Simulates a long running application
-        boolean longRunning = false;
-        while (longRunning) {
+        int count = 0;
+        while (count < LOOP_COUNT) {
+            count++;
             LOGGER.info("Sending a Custom Event");
             createAndAddSingleCustomEvents();
             sendEventNonBlocking();
@@ -48,27 +51,27 @@ public class MyIoTSampleApp {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
+            LOGGER.info("Sending Network Events thru Tracker");
+            createAndAddNetworkEventsThruTracker();
+            sendEventBlocking();
+
+            LOGGER.info("Sending Network Events");
+            createAndAddNetworkEvents();
+            sendEventBlocking();
+
+            LOGGER.info("Sending Network Events w/ Correlation Headers");
+            createAndAddNetworkEventsThruTrackerWithCorrelation();
+            sendEventNonBlocking();
+
+            LOGGER.info("Sending Throwable Events");
+            createAndAddThrowable();
+            sendEventBlocking();
+
+            LOGGER.info("Sending Error Events");
+            createAndAddErrorEvent();
+            sendEventNonBlocking();
         }
-
-        LOGGER.info("Sending Network Events thru Tracker");
-        createAndAddNetworkEventsThruTracker();
-        sendEventBlocking();
-
-        LOGGER.info("Sending Network Events");
-        createAndAddNetworkEvents();
-        sendEventBlocking();
-
-        LOGGER.info("Sending Network Events w/ Correlation Headers");
-        createAndAddNetworkEventsThruTrackerWithCorrelation();
-        sendEventNonBlocking();
-
-        LOGGER.info("Sending Throwable Events");
-        createAndAddThrowable();
-        sendEventBlocking();
-
-        LOGGER.info("Sending Error Events");
-        createAndAddErrorEvent();
-        sendEventNonBlocking();
     }
 
     private static void initInstrumentation() {
