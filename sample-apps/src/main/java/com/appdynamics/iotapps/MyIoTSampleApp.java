@@ -30,7 +30,7 @@ public class MyIoTSampleApp {
     public static final String APP_KEY = "<YOUR-APP-KEY>";
     public static final String COLLECTOR_URL = "<YOUR-COLLECTOR-URL>";
 
-    //Simulates a long running application
+    // Update the value of LOOP_COUNT variable to simulate long running application.
     private static final int LOOP_COUNT = 1;
 
     static final Logger LOGGER = LoggerFactory.getLogger(MyIoTSampleApp.class);
