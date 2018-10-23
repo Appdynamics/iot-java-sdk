@@ -16,12 +16,25 @@
 
 configure(subprojects) {
     apply plugin: 'java'
+    apply plugin: 'jacoco'
 
     sourceCompatibility = '1.7'
     targetCompatibility = '1.7'
 
     repositories {
         mavenCentral()
+    }
+
+    jacoco {
+        toolVersion = "0.8.1"
+    }
+
+    jacocoTestReport {
+        reports {
+            xml.enabled false
+            csv.enabled false
+            html.destination file("${buildDir}/jacocoHtml")
+        }
     }
 
 }
