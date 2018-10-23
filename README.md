@@ -105,13 +105,16 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
 ## Miscellaneous
 * Code Coverage 
     * `jacoco` is integrated in the `build.gradle` file to track code coverage
-    * Generate report from the top-level project directory.
+    * Generate report
     ```bash
-       ./gradlew test jacocoTestReport
+    cd <MY_SOURCE_FOLDER>/iot-java-sdk
+    ./gradlew test jacocoTestReport
     ```
-    * View the report
+    * View the report in your favorite browser
+    * For MacOS
     ```bash
-      ./sdk//build/jacocoHtml/index.html 
+    cd <MY_SOURCE_FOLDER>/iot-java-sdk
+    open ./sdk//build/jacocoHtml/index.html
     ```
 
 ## Versioning
