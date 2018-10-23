@@ -103,13 +103,13 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
     * [Python Sample Code](https://github.com/Appdynamics/iot-rest-api-sample-apps)
 
 ## Miscellaneous
-* Test Code Coverage
-    jacoco is integrated in the build.gradle file
-    * Run jacoco to get a code coverage report from the top-level project directory.
+* Code Coverage 
+    * `jacoco` is integrated in the `build.gradle` file to track code coverage
+    * Generate report from the top-level project directory.
     ```bash
        ./gradlew test jacocoTestReport
     ```
-    * The test code coverage report can be found here
+    * View the report
     ```bash
       ./sdk//build/jacocoHtml/index.html 
     ```
