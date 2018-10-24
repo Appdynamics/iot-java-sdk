@@ -17,6 +17,7 @@
 configure(subprojects) {
     apply plugin: 'java'
     apply plugin: 'jacoco'
+    apply plugin: 'findbugs'
 
     sourceCompatibility = '1.7'
     targetCompatibility = '1.7'
@@ -37,6 +38,12 @@ configure(subprojects) {
         }
     }
 
+    tasks.withType(FindBugs) {
+        ignoreFailures true
+        reports {
+            xml.withMessages true
+        }
+    }
 }
 
 task wrapper(type: Wrapper) {

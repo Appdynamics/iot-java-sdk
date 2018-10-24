@@ -114,6 +114,24 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
         ```
     * View the report by opening the file `<MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/jacocoHtml/index.html` in a browser.
 
+* Code Quality
+    
+    The `build.gradle` file has a task to track code quality using `findbugs`
+
+    * Generate report with the following gradlew command:
+        ```bash
+        cd <MY_SOURCE_FOLDER>/iot-java-sdk
+        ./gradlew check
+        ```
+    * View the report by opening the files
+    
+    `<MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/reports/findbugs/main.xml`
+    `<MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/reports/findbugs/test.xml`
+    `<MY_SOURCE_FOLDER>/iot-java-sdk/sample-apps/build/reports/findbugs/main.xml`
+    
+    * Stylesheets can be downloaded from
+    [here](https://github.com/findbugsproject/findbugs/tree/master/findbugs/src/xsl)
+   
 ## Versioning
 
 Versioning of releases of this project is maintained under the [Semantic Versioning Guidelines](https://semver.org/)
