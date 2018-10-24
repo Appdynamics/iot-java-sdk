@@ -101,6 +101,22 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
     * [C++ SDK and Sample App](https://github.com/Appdynamics/iot-cpp-sdk)
     * [Python Sample Code](https://github.com/Appdynamics/iot-rest-api-sample-apps)
 
+## Miscellaneous
+* Code Quality
+    * `findbugs` is integrated in the `build.gradle` file to track code quality
+    * Generate report
+    ```bash
+        cd <MY_SOURCE_FOLDER>/iot-java-sdk
+      ./gradlew check
+    ```
+    * View the report with your favorite XML Formatter. Stylesheets can be downloaded from
+    [here](https://github.com/findbugsproject/findbugs/tree/master/findbugs/src/xsl)
+    They are not included with this project due to licensing issues
+    ```bash
+    <MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/reports/findbugs/main.xml
+    <MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/reports/findbugs/test.xml
+    <MY_SOURCE_FOLDER>/iot-java-sdk/sample-apps/build/reports/findbugs/main.xml
+    ```
 
 ## Versioning
 Versioning of releases of this project is maintained under the [Semantic Versioning Guidelines](https://semver.org/)

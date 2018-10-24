@@ -16,12 +16,20 @@
 
 configure(subprojects) {
     apply plugin: 'java'
+    apply plugin: 'findbugs'
 
     sourceCompatibility = '1.7'
     targetCompatibility = '1.7'
 
     repositories {
         mavenCentral()
+    }
+
+    tasks.withType(FindBugs) {
+        ignoreFailures true
+        reports {
+            xml.withMessages true
+        }
     }
 
 }
