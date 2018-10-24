@@ -114,7 +114,7 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
     * For MacOS
     ```bash
     cd <MY_SOURCE_FOLDER>/iot-java-sdk
-    open ./sdk//build/jacocoHtml/index.html
+    open ./sdk/build/jacocoHtml/index.html
     ```
 
 ## Versioning
