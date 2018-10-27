@@ -102,20 +102,17 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
     * [C++ SDK and Sample App](https://github.com/Appdynamics/iot-cpp-sdk)
     * [Python Sample Code](https://github.com/Appdynamics/iot-rest-api-sample-apps)
 
-## Miscellaneous
-* Code Coverage 
-    * `jacoco` is integrated in the `build.gradle` file to track code coverage
-    * Generate report
-    ```bash
-    cd <MY_SOURCE_FOLDER>/iot-java-sdk
-    ./gradlew test jacocoTestReport
-    ```
-    * View the report in your favorite browser
-    * For MacOS
-    ```bash
-    cd <MY_SOURCE_FOLDER>/iot-java-sdk
-    open ./sdk/build/jacocoHtml/index.html
-    ```
+## Code Inspection
+* Code Coverage
+
+    The `build.gradle` file has a task to track code coverage using `jacoco`
+
+    * Generate the report with the following gradlew command:
+        ```bash
+        cd <MY_SOURCE_FOLDER>/iot-java-sdk
+        ./gradlew test jacocoTestReport
+        ```
+    * View the report by opening the file `<MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/jacocoHtml/index.html` in a browser.
 
 ## Versioning
 
