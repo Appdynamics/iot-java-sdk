@@ -18,6 +18,7 @@ configure(subprojects) {
     apply plugin: 'java'
     apply plugin: 'jacoco'
     apply plugin: 'findbugs'
+    apply plugin: 'checkstyle'
 
     sourceCompatibility = '1.7'
     targetCompatibility = '1.7'
@@ -43,6 +44,19 @@ configure(subprojects) {
         reports {
             html.enabled true
             xml.enabled false
+        }
+    }
+    
+    checkstyle {
+        toolVersion = '8.2'
+        configDir = new File("${rootProject.rootDir}/config/checkstyle")
+        ignoreFailures = true
+        showViolations = true
+    }
+
+    tasks.withType(Checkstyle) {
+        reports {
+            xml.enabled true
         }
     }
 }
