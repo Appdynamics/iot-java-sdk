@@ -131,7 +131,8 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
     
     * Stylesheets can be downloaded from
     [here](https://github.com/findbugsproject/findbugs/tree/master/findbugs/src/xsl)
-   
+
+
 ## Versioning
 
 Versioning of releases of this project is maintained under the [Semantic Versioning Guidelines](https://semver.org/)
