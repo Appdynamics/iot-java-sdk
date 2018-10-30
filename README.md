@@ -70,6 +70,7 @@ Note: If you do not have an AppDynamics account, you can sign up for one [here.]
 reported to the EUM Collector.
 
 ## Download the Released JAR 
+
 The released version of the SDK can be downloaded from https://github.com/Appdynamics/iot-java-sdk/releases.
 
 ## Build the SDK
@@ -91,7 +92,7 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
 	cd <MY_SOURCE_FOLDER>/iot-java-sdk  
 	./gradlew -p sdk/ clean assemble test generateZippedJavadocs
 	```
- 
+
 ## Documentation
 
 * [Javadoc](https://appdynamics.github.io/iot-java-sdk/) 
@@ -101,8 +102,20 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
     * [C++ SDK and Sample App](https://github.com/Appdynamics/iot-cpp-sdk)
     * [Python Sample Code](https://github.com/Appdynamics/iot-rest-api-sample-apps)
 
+## Code Inspection
+* Code Coverage
+
+    The `build.gradle` file has a task to track code coverage using `jacoco`
+
+    * Generate the report with the following gradlew command:
+        ```bash
+        cd <MY_SOURCE_FOLDER>/iot-java-sdk
+        ./gradlew test jacocoTestReport
+        ```
+    * View the report by opening the file `<MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/jacocoHtml/index.html` in a browser.
 
 ## Versioning
+
 Versioning of releases of this project is maintained under the [Semantic Versioning Guidelines](https://semver.org/)
 
 ## Copyright and License
