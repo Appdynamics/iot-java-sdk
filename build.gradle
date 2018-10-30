@@ -41,7 +41,8 @@ configure(subprojects) {
     tasks.withType(FindBugs) {
         ignoreFailures true
         reports {
-            xml.withMessages true
+            html.enabled true
+            xml.enabled false
         }
     }
 }

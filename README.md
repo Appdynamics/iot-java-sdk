@@ -125,14 +125,10 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
         ```
     * View the report by opening the files
     
-    `<MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/reports/findbugs/main.xml`
-    `<MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/reports/findbugs/test.xml`
-    `<MY_SOURCE_FOLDER>/iot-java-sdk/sample-apps/build/reports/findbugs/main.xml`
+    `<MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/reports/findbugs/main.html`
+    `<MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/reports/findbugs/test.html`
+    `<MY_SOURCE_FOLDER>/iot-java-sdk/sample-apps/build/reports/findbugs/main.html`
     
-    * Stylesheets can be downloaded from
-    [here](https://github.com/findbugsproject/findbugs/tree/master/findbugs/src/xsl)
-
-
 ## Versioning
 
 Versioning of releases of this project is maintained under the [Semantic Versioning Guidelines](https://semver.org/)
