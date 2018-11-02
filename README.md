@@ -77,7 +77,7 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
 
 1. Clone or download the repo https://github.com/Appdynamics/iot-java-sdk.git in `<MY_SOURCE_FOLDER>`.
 1. Make any modifications to the SDK, if desired.
-1. Run the following command from a terminal:
+1. Run the following command from a terminal
 	```bash
 	cd <MY_SOURCE_FOLDER>/iot-java-sdk 
 	./gradlew -p sdk/ clean assemble test
@@ -87,7 +87,7 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
 
 1. Clone or download the repo https://github.com/Appdynamics/iot-java-sdk.git in `<MY_SOURCE_FOLDER>`.
 1. Make any modifications, if desired.
-1. Run the following command from a terminal:
+1. Run the following command from a terminal
 	```bash
 	cd <MY_SOURCE_FOLDER>/iot-java-sdk  
 	./gradlew -p sdk/ clean assemble test generateZippedJavadocs
@@ -129,6 +129,16 @@ The released version of the SDK can be downloaded from https://github.com/Appdyn
     `<MY_SOURCE_FOLDER>/iot-java-sdk/sdk/build/reports/findbugs/test.html`
     `<MY_SOURCE_FOLDER>/iot-java-sdk/sample-apps/build/reports/findbugs/main.html`
     
+* Coding Standards Inspection
+    The `build.gradle` file has a task to track code quality using `checkstyle`
+    
+    * Generate the report with the following gradlew command
+    ```bash
+    cd <MY_SOURCE_FOLDER>/iot-java-sdk
+    ./gradlew check
+    ```
+    * View the reports in `<MY_SOURCE_FOLDER>/iot-java-sdk/*/build/reports/checkstyle/`
+
 ## Versioning
 
 Versioning of releases of this project is maintained under the [Semantic Versioning Guidelines](https://semver.org/)
